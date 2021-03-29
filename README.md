@@ -1,5 +1,5 @@
 # Lagrange
-O que fazemos é aproximar uma função desconhecida por outra. No caso, criaremos uma função polinômial. É garantido que sempre é possíıvel aproximar uma função contínua por um polinômio. Além disso, polinômios têm derivadas e integrais muito fáceis de serem calculadas.
+O que fazemos é aproximar uma função desconhecida por outra. No caso, criaremos uma função polinômial. É garantido que sempre é possível aproximar uma função contínua por um polinômio. Além disso, polinômios têm derivadas e integrais muito fáceis de serem calculadas.
 Primeiramente, vamos definir as funções:
 Para os pontos (x0, y0) e (x1, y1), utilizamos a seguinte formula
 
