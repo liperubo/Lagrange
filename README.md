@@ -8,7 +8,7 @@ L0(x) = x − x1 / x0 − x1
 L1(x) = x − x0 / x1 − x0
        
 Depois, definimos o polinômio
-P(x) = L0(x)f (x0) + L1(x)f (x1).
+P(x) = L0(x) * f(x0) + L1(x) * f(x1).
 
 Para aumentar o numero de pontos, multiplicamos os valores mais vezes:
 Para os pontos (x0, y0), (x1, y1) e (x2, y2), utilizamos a seguinte formula
