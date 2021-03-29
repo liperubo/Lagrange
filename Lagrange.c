@@ -15,7 +15,7 @@ Turma: CP004TIM2*/
 
 typedef struct Lagrange
 {
-	float x;
+  float x;
   float y;
 } Lagrange;
 
@@ -87,11 +87,11 @@ int main()
 
 void alocaLagrange(Lagrange **p, int m)
 {
-	if ((*p = (Lagrange *)realloc(*p, m * sizeof(Lagrange))) == NULL)
-	{
-		printf("\nErro na alocacao. O programa sera encerrado!");
-		exit(1);
-	}
+  if ((*p = (Lagrange *)realloc(*p, m * sizeof(Lagrange))) == NULL)
+  {
+    printf("\nErro na alocacao. O programa sera encerrado!");
+    exit(1);
+  }
 }
 
 // ------------------------- To Do List --------------------------- //
