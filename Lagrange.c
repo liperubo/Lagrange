@@ -15,7 +15,7 @@ Turma: CP004TIM2*/
 
 typedef struct Lagrange
 {
-  float x;
+	float x;
   float y;
 } Lagrange;
 
@@ -29,7 +29,8 @@ int main()
 {
   Lagrange *pLagr = NULL;
   int n, i = 0, j = 0;
-  float A = 1, B = 1, C = 0, x;
+  float A = 1, B = 1, C = 0, x; 
+  float xMin, xMax; //float xMin = NULL, xMax = NULL;
 
   //Receber o numero de pontos (n)
   printf("\nDigite a quantidade de pontos na tabela: ");
@@ -45,6 +46,16 @@ int main()
     printf("Digite o %io ponto no formato [x y]: ", i+1);
     scanf("%f %f",&((pLagr+i)->x), &((pLagr+i)->y));
     fflush(stdin);
+
+    if (i == 0 || xMin > (pLagr+i)->x)
+    {
+      xMin = (pLagr+i)->x;
+    }
+
+    if (i == 0 || xMax < (pLagr+i)->x)
+    {
+      xMax = (pLagr+i)->x;
+    }
   }
 
   printf("\nx\ty");
@@ -53,10 +64,16 @@ int main()
     printf("\n%.3f %.3f", (pLagr+i)->x, (pLagr+i)->y);
   }
   
-  //Receber o valor a ser interpolado (x)
-  printf("\n\nDigite o valor a ser interpolado: ");
-  scanf("%f",&x);
-  fflush(stdin);
+  //Receber o valor a ser interpolado (x) 
+  do
+  {
+    printf("\n\nDigite o valor a ser interpolado: ");
+    scanf("%f",&x);
+    fflush(stdin);
+    if(x < xMin || x > xMax){
+      printf("Digite um valor dentro do escopo [%.3f ~ %.3f]", xMin, xMax);
+    }
+  } while (x < xMin || x > xMax);
 
   //Loop (For i<n):
   for (i = 0; i < n; i++)
